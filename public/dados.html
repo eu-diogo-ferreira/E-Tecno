@@ -10,7 +10,7 @@
     <meta name="keywords" content="etec">
 
     <!-- Title Page-->
-    <title>Home - E-Tecno</title>
+    <title>Dados - E-Tecno</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -56,12 +56,12 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
+                        <li>
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Painel de Controle</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="#">Sala X</a>
+                                    <a href="index.html">Sala X</a>
                                 </li>
                                 <!--<li>
                                     <a href="index2.html">Dashboard 2</a>
@@ -75,15 +75,15 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="graficos.html">
                                 <i class="fas fa-chart-bar"></i>Gráficos</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="#">
                                 <i class="fas fa-table"></i>Dados</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="actions.html">
                                 <i class="far fa-check-square"></i>Ações</a>
                         </li>
                         <!--<li>
@@ -165,7 +165,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
+                        <li>
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Painel de Controle</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
@@ -188,8 +188,8 @@
                             <a href="graficos.html">
                                 <i class="fas fa-chart-bar"></i>Gráficos</a>
                         </li>
-                        <li>
-                            <a href="dados.html">
+                        <li  class="active has-sub">
+                            <a href="#">
                                 <i class="fas fa-table"></i>Dados</a>
                         </li>
                         <li>
@@ -446,348 +446,180 @@
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
-                    <div class="container-fluid">
+                    <div class="container-fluid">                                              
+                                              
+                        
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="overview-wrap">
-                                    <h2 class="title-1">Visão geral</h2>
-                                    <button class="au-btn au-btn-icon au-btn--blue">
-                                        <i class="zmdi zmdi-plus"></i>Adicionar item</button>
+                            <div class="col-lg-9">
+                                <h2 class="title-1 m-b-25">Histórico de Saídas</h2>
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>data</th>
+                                                <th>ID</th>
+                                                <th>nome</th>
+                                                <!--<th class="text-right">price</th>-->
+                                                <th class="text-right">Pedidos</th>
+                                                <!--<th class="text-right">total</th>-->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2020-09-29 05:57</td>
+                                                <td>100398</td>
+                                                <td>Reginaldo</td>
+                                                
+                                                <td class="text-right">1</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-28 01:22</td>
+                                                <td>100397</td>
+                                                <td>Barbis</td>
+                                                
+                                                <td class="text-right">1</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-27 02:12</td>
+                                                <td>100396</td>
+                                                <td>Birelo</td>
+                                                
+                                                <td class="text-right">2</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-26 23:06</td>
+                                                <td>100395</td>
+                                                <td>Bárbara</td>
+                                                
+                                                <td class="text-right">1</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-25 19:03</td>
+                                                <td>100393</td>
+                                                <td>Deus</td>
+                                                
+                                                <td class="text-right">3</td>
+                                                
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row m-t-25">
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c1">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-account-o"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>2.600</h2>
-                                                <span>alunos</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <!--
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c2">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-shopping-cart"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>388,688</h2>
-                                                <span>items solid</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart2"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            -->
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c3">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-calendar-note"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>200</h2>
-                                                <span>dias letivos</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart3"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c4">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-money"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>$1,060,386</h2>
-                                                <span>Arrecadados da APM</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart4"></canvas>
+                            
+                            
+                            
+                            <div class="col-lg-3">
+                                <h2 class="title-1 m-b-25">Salas com mais Requisições</h2>
+                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
+                                    <div class="au-card-inner">
+                                        <div class="table-responsive">
+                                            <table class="table table-top-countries">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>3 Automação</td>
+                                                        <td class="text-right">999999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2 Automação</td>
+                                                        <td class="text-right">9999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3 Info</td>
+                                                        <td class="text-right">200</td>
+                                                    </tr>                                                    
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Chat e agenda -->
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                                    <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
-                                        <div class="bg-overlay bg-overlay--blue"></div>
-                                        <h3>
-                                            <i class="zmdi zmdi-account-calendar"></i>20 de abril de 2020</h3>
-                                        <button class="au-btn-plus">
-                                            <i class="zmdi zmdi-plus"></i>
-                                        </button>
-                                    </div>
-                                    <div class="au-task js-list-load">
-                                        <div class="au-task__title">
-                                            <p>Eventos de Diogo ferreira</p>
-                                        </div>
-                                        <div class="au-task-list js-scrollbar3">
-                                            <div class="au-task__item au-task__item--danger">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Bater em racistas</a>
-                                                    </h5>
-                                                    <span class="time">10:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--warning">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Bater em racistas</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--primary">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Bater em racistas</a>
-                                                    </h5>
-                                                    <span class="time">02:00 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--success">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Bater em racistas</a>
-                                                    </h5>
-                                                    <span class="time">03:30 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--danger js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">XXXX</a>
-                                                    </h5>
-                                                    <span class="time">10:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--warning js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Adicionar</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-task__footer">
-                                            <button class="au-btn au-btn-load js-load-btn">APERTA AQUII MANO</button>
-                                        </div>
-                                    </div>
+                        <!-- TABELA DE PERMISSÕES -->
+                        <div class="row m-t-30">
+                            <div class="col-md-12">
+                                <!-- DATA TABLE-->
+                                <div class="table-responsive m-b-40">
+                                    <table class="table table-borderless table-data3">
+                                        <thead>
+                                            <tr>
+                                                <th>data</th>
+                                                <th>evento</th>
+                                                <th>descrição</th>
+                                                <th>status</th>
+                                                <th>solicitante</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2020-09-29 05:57</td>
+                                                <td>Saída</td>
+                                                <td>Quero sair para fazer coco</td>
+                                                <td class="process">Processada</td>
+                                                <td>João Birelo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-28 01:22</td>
+                                                <td>Entrada</td>
+                                                <td>Dormi até tarde</td>
+                                                <td class="process">Processada</td>
+                                                <td>Diego Marques</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-27 02:12</td>
+                                                <td>Entrada</td>
+                                                <td>Estava fumando um verde</td>
+                                                <td class="denied">Negada</td>
+                                                <td>Diogo Ferreira</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-26 23:06</td>
+                                                <td>Saída</td>
+                                                <td>Não aguento mais esse lugar</td>
+                                                <td class="denied">Negada</td>
+                                                <td>Diogo Ferreira</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-25 19:03</td>
+                                                <td>Saída</td>
+                                                <td>Consulta médica</td>
+                                                <td class="process">Processada</td>
+                                                <td>Bárbara Moreira</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-29 05:57</td>
+                                                <td>Saída</td>
+                                                <td>Quero fazer o numero 2</td>
+                                                <td class="denied">Negada</td>
+                                                <td>João Eugênio</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-24 19:10</td>
+                                                <td>Entrada</td>
+                                                <td>Estava de ressaca</td>
+                                                <td class="process">Processada</td>
+                                                <td>Guilherme de Jesus</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-22 00:43</td>
+                                                <td>Entrada</td>
+                                                <td>Dormi demais</td>
+                                                <td class="process">Processada</td>
+                                                <td>João Birelo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                                    <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
-                                        <div class="bg-overlay bg-overlay--blue"></div>
-                                        <h3>
-                                            <i class="zmdi zmdi-comment-text"></i>Novas mensagens</h3>
-                                        <button class="au-btn-plus">
-                                            <i class="zmdi zmdi-plus"></i>
-                                        </button>
-                                    </div>
-                                    <div class="au-inbox-wrap js-inbox-wrap">
-                                        <div class="au-message js-list-load">
-                                            <div class="au-message__noti">
-                                                <p>Vocẽ tem
-                                                    <span>2</span>
-
-                                                    novas mensagens
-                                                </p>
-                                            </div>
-                                            <div class="au-message-list">
-                                                <div class="au-message__item unread">
-                                                    <div class="au-message__item-inner">
-                                                        <div class="au-message__item-text">
-                                                            <div class="avatar-wrap">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/diogo.png" alt="didi">
-                                                                </div>
-                                                            </div>
-                                                            <div class="text">
-                                                                <h5 class="name">Didi</h5>
-                                                                <p>Enviou novas fotos</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="au-message__item-time">
-                                                            <span>12 Min atrás</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="au-message__item unread">
-                                                    <div class="au-message__item-inner">
-                                                        <div class="au-message__item-text">
-                                                            <div class="avatar-wrap online">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/diogo.png" alt="mano mano">
-                                                                </div>
-                                                            </div>
-                                                            <div class="text">
-                                                                <h5 class="name">Didi</h5>
-                                                                <p>Conectou-se</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="au-message__item-time">
-                                                            <span>11:00 PM</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="au-message__item">
-                                                    <div class="au-message__item-inner">
-                                                        <div class="au-message__item-text">
-                                                            <div class="avatar-wrap online">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/diogo.png" alt="isso ae">
-                                                                </div>
-                                                            </div>
-                                                            <div class="text">
-                                                                <h5 class="name">Didi</h5>
-                                                                <p>Lorem ipsum dolor sit amet</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="au-message__item-time">
-                                                            <span>Ontem</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="au-message__item">
-                                                    <div class="au-message__item-inner">
-                                                        <div class="au-message__item-text">
-                                                            <div class="avatar-wrap">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/diogo.png" alt="karaio">
-                                                                </div>
-                                                            </div>
-                                                            <div class="text">
-                                                                <h5 class="name">Didi</h5>
-                                                                <p>Purus feugiat finibus</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="au-message__item-time">
-                                                            <span>Segunda</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="au-message__item js-load-item">
-                                                    <div class="au-message__item-inner">
-                                                        <div class="au-message__item-text">
-                                                            <div class="avatar-wrap online">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/diogo.png" alt="mano">
-                                                                </div>
-                                                            </div>
-                                                            <div class="text">
-                                                                <h5 class="name">Didi</h5>
-                                                                <p>Lorem ipsum dolor sit amet</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="au-message__item-time">
-                                                            <span>Ontem</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="au-message__item js-load-item">
-                                                    <div class="au-message__item-inner">
-                                                        <div class="au-message__item-text">
-                                                            <div class="avatar-wrap">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/diogo.png" alt="porra">
-                                                                </div>
-                                                            </div>
-                                                            <div class="text">
-                                                                <h5 class="name">sai daqui mano</h5>
-                                                                <p>Purus feugiat finibus</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="au-message__item-time">
-                                                            <span>Segunda</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="au-message__footer">
-                                                <button class="au-btn au-btn-load js-load-btn">CRICA AKI VAI</button>
-                                            </div>
-                                        </div>
-                                        <div class="au-chat">
-                                            <div class="au-chat__title">
-                                                <div class="au-chat-info">
-                                                    <div class="avatar-wrap online">
-                                                        <div class="avatar avatar--small">
-                                                            <img src="images/icon/diogo.png" alt="YES">
-                                                        </div>
-                                                    </div>
-                                                    <span class="nick">
-                                                        <a href="#">Diogo</a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="au-chat__content">
-                                                <div class="recei-mess-wrap">
-                                                    <span class="mess-time">12 Min atrás</span>
-                                                    <div class="recei-mess__inner">
-                                                        <div class="avatar avatar--tiny">
-                                                            <img src="images/icon/diogo.png" alt="isso">
-                                                        </div>
-                                                        <div class="recei-mess-list">
-                                                            <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
-                                                            <div class="recei-mess">Donec tempor, sapien ac viverra</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="send-mess-wrap">
-                                                    <span class="mess-time">30 Sec atrás</span>
-                                                    <div class="send-mess__inner">
-                                                        <div class="send-mess-list">
-                                                            <div class="send-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="au-chat-textfield">
-                                                <form class="au-form-icon">
-                                                    <input class="au-input au-input--full au-input--h65" type="text" placeholder="Type a message">
-                                                    <button class="au-input-icon">
-                                                        <i class="zmdi zmdi-camera"></i>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- END DATA TABLE-->
                             </div>
                         </div>
+                        <!-- END TABELA DE PERMISSÕES -->
+                           
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
